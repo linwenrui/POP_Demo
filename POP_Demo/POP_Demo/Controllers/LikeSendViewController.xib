@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikeSendViewController" customModule="POP_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="likeImg" destination="ZdX-1j-SIK" id="KEQ-ss-ZzP"/>
+                <outlet property="sendLab" destination="tDj-iv-SJH" id="ty5-K0-piM"/>
+                <outlet property="textField" destination="OFc-mo-QOP" id="RBw-va-j4v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="随便" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFc-mo-QOP">
+                    <rect key="frame" x="20" y="30" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="luu-Om-HTf"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="ZdX-1j-SIK">
+                    <rect key="frame" x="305" y="70" width="50" height="56"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDj-iv-SJH">
+                    <rect key="frame" x="310.5" y="97.5" width="39.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.18796157836914062" green="0.47609364986419678" blue="0.986949622631073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZdX-1j-SIK" firstAttribute="top" secondItem="OFc-mo-QOP" secondAttribute="bottom" constant="10" id="TGI-JU-W8a"/>
+                <constraint firstItem="tDj-iv-SJH" firstAttribute="centerX" secondItem="ZdX-1j-SIK" secondAttribute="centerX" id="Ycx-dT-VEx"/>
+                <constraint firstItem="OFc-mo-QOP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="dyQ-u3-KRr"/>
+                <constraint firstItem="ZdX-1j-SIK" firstAttribute="baseline" secondItem="tDj-iv-SJH" secondAttribute="firstBaseline" constant="12.5" symbolType="layoutAnchor" id="txR-D4-pPi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OFc-mo-QOP" secondAttribute="trailing" constant="20" id="ye2-XL-K7c"/>
+                <constraint firstItem="OFc-mo-QOP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ywM-iP-bqE"/>
+                <constraint firstItem="ZdX-1j-SIK" firstAttribute="trailing" secondItem="OFc-mo-QOP" secondAttribute="trailing" id="yxC-ZK-X8s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-294.5" y="-5.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="like" width="50" height="56"/>
+    </resources>
+</document>
